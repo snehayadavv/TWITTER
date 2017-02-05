@@ -17,6 +17,13 @@
 <input type="submit" value="TWEET" />
 </form>
 <ul>
+<!-- +++++++++++++ -->
+<% manish.each do |user| %>
+<%= user.email%>
+<%puts "user.email" %><br>
+<%end%>
+<!-- +++++++++++++++++ -->
+
 <%
 if tasks
 tasks.each do |task|  %>

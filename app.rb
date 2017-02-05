@@ -36,8 +36,8 @@ get '/' do
 	end
 
 	tasks = Task.all(:user_id => user.id)
-
-	erb :index, locals: {user: user, tasks: tasks}
+user1=User.all
+	erb :index, locals: {user: user, tasks: tasks,:manish=>user1}
 end
 
 get '/signup' do
