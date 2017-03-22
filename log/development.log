@@ -313,3 +313,42 @@ Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:29:06 +0530
 Processing by AuthenticationControllerController#signin_get as HTML
   Rendered authentication_controller/signin_get.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:43:34 +0530
+Processing by AuthenticationControllerController#signin_get as HTML
+  Rendered authentication_controller/signin_get.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:44:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationControllerController#signin_get as HTML
+  Rendered authentication_controller/signin_get.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:44:18 +0530
+Processing by AuthenticationControllerController#signin_get as HTML
+  Rendered authentication_controller/signin_get.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:44:19 +0530
+Processing by AuthenticationControllerController#signin_get as HTML
+  Rendered authentication_controller/signin_get.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2017-03-22 12:46:51 +0530
+Processing by AuthenticationControllerController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mV7oo3aJ/wubVu4Ur6xBOkK3piPOXUtEa4p38nXIJjfWIEN8WUV/+MVAgwW9u1WnbWzFcDpjvhvA7saxhz2Uwg==", "email"=>"manish", "password"=>"[FILTERED]", "commit"=>"Signin"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "manish"]]
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-03-22 12:46:51 +0530
+Processing by AuthenticationControllerController#signin_get as HTML
+  Rendered authentication_controller/signin_get.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
