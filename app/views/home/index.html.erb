@@ -1,2 +1,54 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<br>
+<%= form_tag '/create_tweet_json', id: "create_tweet" do %>
+    <%= text_area_tag :content %>
+
+    <br>
+    <%= submit_tag "Create Tweet" %>
+    <span id="letters">0</span>
+
+<% end %>
+
+
+<%= form_tag '/', method: :get do %>
+
+    <%= text_field_tag 'search' %>
+    <br>
+    <%= submit_tag 'search' %>
+<% end %>
+
+<div class="tweets" id="tweets">
+  <% @tweets.each do |tweet| %>
+
+<div class="tweet">
+  <div class="userImage inline">
+    <div class="dummy">
+      <img class="tweetImage" src="https://pbs.twimg.com/profile_images/616147175987265536/EQm39fW7_bigger.png">
+    </div>
+  </div>
+
+  <div class="content inline">
+    <div class="userDetails">
+      <div class="username inline"><%= tweet.user.email %></div>
+      <div class="time inline"><%= tweet.created_at.to_formatted_s(:short) %></div>
+    </div>
+    <div class="tweetContent"><%= tweet.content %></div>
+    <div class="reactions">
+
+      <% if tweet.likes.where(user_id: current_user.id).length > 0 %>
+          <%= link_to "UnLike", url_for(controller: :home, action: :like, tweet_id: tweet.id), method: :post, class: 'tweet_like_link' , id: "tweet_#{tweet.id}"%>
+
+      <% else %>
+          <%= link_to "Like", url_for(controller: :home, action: :like, tweet_id: tweet.id), method: :post, class: 'tweet_like_link', id: "tweet_#{tweet.id}"  %>
+
+
+      <% end %>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+  <% end %>
+</div>

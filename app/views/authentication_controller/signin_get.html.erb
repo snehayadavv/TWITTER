@@ -1,8 +1,8 @@
-<%=form_tag '/signin' do %>
+<%= form_tag '/signin' do %>
 
- Email: <%= text_field_tag :email %><br>
-
-  Password:  <%= password_field_tag :password%><br>
+    <%= text_field_tag :email %> <br>
+    <%= password_field_tag :password %> <br>
     <%= submit_tag "Signin" %>
+
 
 <% end %>
