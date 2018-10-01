@@ -1,4 +1,4 @@
 == Twitter like website
 
- Developed only for learning purpose.
+Developed only for learning purpose.
  
